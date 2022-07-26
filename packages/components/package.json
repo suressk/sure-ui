@@ -1,0 +1,12 @@
+{
+  "name": "@sure-ui/components",
+  "version": "1.0.0",
+  "description": "",
+  "author": {
+    "name": "Saul (suressk)",
+    "email": "sure_ssk@outlook.com"
+  },
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js"
+}

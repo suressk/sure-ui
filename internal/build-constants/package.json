@@ -1,0 +1,23 @@
+{
+  "name": "@sure-ui/build-constants",
+  "version": "1.0.0",
+  "description": "Build Constants for Sure UI",
+  "author": {
+    "name": "Saul (suressk)",
+    "email": "sure_ssk@outlook.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sure-ui"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.6"
+  }
+}

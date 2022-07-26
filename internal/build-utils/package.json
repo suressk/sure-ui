@@ -1,0 +1,28 @@
+{
+  "name": "@sure-ui/build-utils",
+  "version": "1.0.0",
+  "description": "Build Utils for Sure UI",
+  "author": {
+    "name": "Saul (suressk)",
+    "email": "sure_ssk@outlook.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sure-ui"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub"
+  },
+  "dependencies": {
+    "@pnpm/find-workspace-packages": "^4.0.21",
+    "@pnpm/logger": "^4.0.0",
+    "consola": "^2.15.3"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.6"
+  }
+}

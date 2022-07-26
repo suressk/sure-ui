@@ -1,0 +1,6 @@
+{
+  "name": "@sure-ui/utils",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts"
+}

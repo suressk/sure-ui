@@ -1,0 +1,5 @@
+export const PKG_PREFIX = '@sure-ui'
+export const PKG_NAME = 'sure-ui'
+export const PKG_CAMELCASE_NAME = 'SureUI'
+export const PKG_CAMELCASE_LOCAL_NAME = 'SureUILocale'
+export const PKG_BRAND_NAME = 'Sure UI'

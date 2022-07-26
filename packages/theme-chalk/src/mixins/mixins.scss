@@ -1,0 +1,6 @@
+/* 声明 sass 方法 */
+/* 引入 config.scss 内容 */
+@use 'config' as *;
+
+/* 提升为全局变量 */
+@forward 'config';
