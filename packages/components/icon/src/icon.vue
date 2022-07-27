@@ -6,6 +6,7 @@ import { iconProps } from './icon'
 
 const props = defineProps(iconProps)
 
+// Waitting for being achieved
 // defineOptions({
 //   name: 'SureIcon',
 //   inheritAttrs: false
