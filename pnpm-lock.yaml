@@ -165,10 +165,12 @@ importers:
   playground:
     specifiers:
       '@vitejs/plugin-vue': ^3.0.1
+      sure-icons-vue: ^0.0.1
       unplugin-vue-define-options: ^0.6.2
       vite: ^3.0.2
       vue: ^3.2.37
     dependencies:
+      sure-icons-vue: 0.0.1
       vue: 3.2.37
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.2+vue@3.2.37
@@ -336,7 +338,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.18.4
+      '@babel/types': 7.18.9
 
   /@babel/parser/7.18.9:
     resolution: {integrity: sha512-9uJveS9eY9DJ0t64YbIBZICtJy8a5QrDEVdiLCG97fVLpDTpGX7t8mMSb6OWw6Lrnjqj4O8zwjELX3dhoMgiBg==}
@@ -378,20 +380,12 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/types/7.18.4:
-    resolution: {integrity: sha512-ThN1mBcMq5pG/Vm2IcBmPPfyPXbd8S02rS+OBIDENdufvqC7Z/jHPCv9IcP01277aKtDI8g/2XysBN4hA8niiw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-validator-identifier': 7.18.6
-      to-fast-properties: 2.0.0
-
   /@babel/types/7.18.9:
     resolution: {integrity: sha512-WwMLAg2MvJmt/rKEVQBBhIVffMmnilX4oe0sRe7iPOHIGsqpruFHHdrfj4O1CMMtgMtCU4oPafZjDPCRgO57Wg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
-    dev: true
 
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -6700,6 +6694,10 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /sure-icons-vue/0.0.1:
+    resolution: {integrity: sha512-hi6C7mdly8vV+9XMR2nUT3F4fMMMAy2AAzGZDiks/O9/w4EJ9aKNxBl4KQxmL/7Anx85Rv/P0FzXE5J8m2aFSA==}
+    dev: false
 
   /sure-utils/1.1.1:
     resolution: {integrity: sha512-0qPwbHbky2l+z9HU/BrsqBJ8ua13q6xipKh+jCmLqojnEetcJzKVk/mqm4C+mx3X1EG6XBophnqd2vnaJh4dsQ==}

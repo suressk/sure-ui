@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-// import { SureIcon } from '@sure-ui/components'
+import { SureIcon } from '@sure-ui/components'
+import { Apple } from 'sure-icons-vue'
+import CompVue from './components/Comp.vue'
+
+// eslint-disable-next-line no-console
+console.log('SureIcon:', SureIcon)
 
 const count = ref(0)
 
@@ -23,6 +28,10 @@ const change = () => {
       <SureIcon color="#45b787" :size="20" class="sure-icon-chrome" />
       <SureIcon color="#2177b8" class="sure-icon-overview" />
     </p>
+    <CompVue class="sure-comp" />
+    <br>
+    <p>sure-icons-vue</p>
+    <Apple style="height: 2em; width: 2em; color: #409eff;" />
   </div>
 </template>
 
