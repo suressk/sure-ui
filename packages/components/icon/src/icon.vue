@@ -7,10 +7,11 @@ import { iconProps } from './icon'
 const props = defineProps(iconProps)
 
 // Waitting for being achieved
-// defineOptions({
-//   name: 'SureIcon',
-//   inheritAttrs: false
-// })
+defineOptions({
+  name: 'SureIcon'
+  // 继承 attrs（属性）
+  // inheritAttrs: false
+})
 
 const style = computed<CSSProperties>(() => {
   if (!props.size && !props.color) {
