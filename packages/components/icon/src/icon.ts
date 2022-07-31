@@ -7,6 +7,7 @@ import { definePropType } from '@sure-ui/utils'
 export const iconProps = {
   size: {
     type: definePropType<string | number>([Number, String])
+    // type: Number
   },
   color: {
     type: String

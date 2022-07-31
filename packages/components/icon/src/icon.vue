@@ -8,9 +8,9 @@ const props = defineProps(iconProps)
 
 // Waitting for being achieved
 defineOptions({
-  name: 'SureIcon'
+  name: 'SureIcon',
   // 继承 attrs（属性）
-  // inheritAttrs: false
+  inheritAttrs: false
 })
 
 const style = computed<CSSProperties>(() => {

@@ -1,11 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { SureIcon } from '@sure-ui/components'
-import { Apple } from 'sure-icons-vue'
-import CompVue from './components/Comp.vue'
-
-// eslint-disable-next-line no-console
-console.log('SureIcon:', SureIcon)
+import { Apple, Chrome } from 'sure-icons-vue'
+import Comp from './components/Comp.vue'
 
 const count = ref(0)
 
@@ -21,17 +18,19 @@ const change = () => {
     <button @click="change">
       count++
     </button>
-    <p>
-      <SureIcon color="#346c9c" class="sure-icon-article" />
-      <SureIcon color="#fcd217" :size="20" class="sure-icon-flashing" />
-      <SureIcon color="#d11c31" :size="30" class="sure-icon-like" />
-      <SureIcon color="#45b787" :size="20" class="sure-icon-chrome" />
-      <SureIcon color="#2177b8" class="sure-icon-overview" />
-    </p>
-    <CompVue class="sure-comp" />
     <br>
-    <p>sure-icons-vue</p>
-    <Apple style="height: 2em; width: 2em; color: #409eff;" />
+    <br>
+    <Comp class="sure-comp" />
+    <br>
+    <a href="https://npmjs.com/package/sure-icons-vue">sure-icons-vue</a>
+    <br>
+    <SureIcon color="#2177b8" :size="20">
+      <Apple />
+    </SureIcon>
+    <SureIcon color="#45b787" size="30px">
+      <Chrome />
+    </SureIcon>
+    <Apple style="height: 2em; width: 2em; color: #fbda41;" />
   </div>
 </template>
 
