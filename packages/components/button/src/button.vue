@@ -9,7 +9,7 @@ const _ref = ref<HTMLButtonElement>()
 
 <template>
   <button ref="_ref">
-    <span v-if="loading" class="" />
+    <span v-if="loading" class="sure-icon-loading" />
     <span>
       <slot />
     </span>

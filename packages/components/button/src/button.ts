@@ -11,8 +11,7 @@ export const buttonTypes = [
 
 export const buttonProps = {
   size: {
-    type: Object,
-    default: () => ({})
+    type: String
   },
   type: {
     type: String,
