@@ -1,6 +1,7 @@
 {
   "name": "@sure-ui/build-utils",
   "version": "1.0.0",
+  "private": true,
   "description": "Build Utils for Sure UI",
   "author": {
     "name": "Saul (suressk)",
