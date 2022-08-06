@@ -1,5 +1,5 @@
 import { isNumber, isString } from 'sure-utils'
-import { debugWarn } from '@sure-ui/utils'
+import { debugWarn } from '../error'
 
 const SCOPE = 'utils/dom/style'
 
