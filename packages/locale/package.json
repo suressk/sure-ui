@@ -1,0 +1,14 @@
+{
+  "name": "@sure-ui/locale",
+  "version": "0.0.0",
+  "description": "Sure UI locale",
+  "author": {
+    "name": "Saul (suressk)",
+    "email": "sure_ssk@outlook.com"
+  },
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js"
+}
