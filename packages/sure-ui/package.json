@@ -1,0 +1,19 @@
+{
+  "name": "sure-ui",
+  "version": "0.0.0",
+  "description": "A Component Library for Vue 3",
+  "author": {
+    "name": "Saul (suressk)",
+    "email": "sure_ssk@outlook.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sure-ui",
+    "sure",
+    "ui",
+    "ui framework",
+    "component library",
+    "vue"
+  ],
+  "main": "index.js"
+}
