@@ -1,1 +1,1 @@
-export {}
+export * from './sure-ui-alias'

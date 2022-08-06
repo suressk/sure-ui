@@ -9,8 +9,11 @@ import { projectRoot } from '@sure-ui/build-utils'
  * @param cwd
  * @returns
  */
-export const run = async (command: string, cwd: string = projectRoot) =>
-  new Promise<void>((resolve, reject) => {
+export const run = async (
+  command: string,
+  cwd: string = projectRoot
+) => {
+  return new Promise<void>((resolve, reject) => {
     const [cmd, ...args] = command.split(' ')
     consola.info(`run: ${colors.green(`${cmd} ${args.join(' ')}`)}`)
     const app = spawn(cmd, args, {
@@ -24,7 +27,9 @@ export const run = async (command: string, cwd: string = projectRoot) =>
     app.on('close', (code) => {
       process.removeListener('exit', onProcessExit)
 
-      if (code === 0) { resolve() } else {
+      if (code === 0) {
+        resolve()
+      } else {
         reject(
           new Error(`Command failed. \n Command: ${command} \n Code: ${code}`)
         )
@@ -32,3 +37,4 @@ export const run = async (command: string, cwd: string = projectRoot) =>
     })
     process.on('exit', onProcessExit)
   })
+}

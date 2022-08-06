@@ -1,6 +1,7 @@
 {
   "name": "@sure-ui/build",
   "version": "1.0.0",
+  "private": true,
   "description": "Build Toolchain for Sure UI",
   "author": {
     "name": "Saul (suressk)",
@@ -10,25 +11,38 @@
   "keywords": [
     "sure-ui"
   ],
-  "main": "index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
     "dev": "unbuild --stub"
   },
   "dependencies": {
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@sure-ui/build-constants": "workspace:^1.0.0",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "components-helper": "^2.0.0",
     "consola": "^2.15.3",
     "esbuild": "^0.14.50",
+    "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "gulp": "^4.0.2",
+    "lodash": "^4.17.21",
     "picocolors": "^1.0.0",
-    "rollup": "^2.77.0",
-    "rollup-plugin-esbuild": "^4.9.1"
+    "rollup": "^2.77.2",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "ts-morph": "^15.1.0",
+    "unplugin-vue-define-options": "^0.6.2"
   },
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.3.2",
     "@types/fs-extra": "^9.0.13",
+    "@types/lodash": "^4.14.182",
     "unbuild": "^0.7.6",
+    "vite": "^3.0.2",
     "vue": "^3.2.37"
   }
 }

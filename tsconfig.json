@@ -1,45 +1,57 @@
+// {
+//   "compilerOptions": {
+//     /* Visit https://aka.ms/tsconfig.json to read more about this file */
+//     /* Language and Environment */
+//     "target": "es2016",
+//     "lib": [
+//       "ESNext",
+//       "DOM"
+//     ],
+//     "jsx": "preserve",
+//     "useDefineForClassFields": false,
+//     /* Modules */
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "baseUrl": ".",
+//     "paths": {
+//       "@sure-ui/*": [
+//         "packages/*"
+//       ]
+//     },
+//     "resolveJsonModule": true,
+//     /* JavaScript Support */
+//     "allowJs": false,
+//     /* Emit */
+//     "sourceMap": false,
+//     "outDir": "dist",
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": true,
+//     /* Type Checking */
+//     "strict": true,
+//     "skipLibCheck": true,
+//     "types": [
+//       "unplugin-vue-define-options"
+//     ]
+//   },
+//   /*
+//     It will make ts cannot find any input,
+//     and "import xx from '@sure-ui/xx'" will be error
+//   */
+//   // "include": ["packages/*"],
+//   "exclude": [
+//     "**/dist",
+//     "node_modules"
+//   ]
+// }
 {
-  "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig.json to read more about this file */
-    /* Language and Environment */
-    "target": "es2016",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
-    "jsx": "preserve",
-    "useDefineForClassFields": false,
-    /* Modules */
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@sure-ui/*": [
-        "packages/*"
-      ]
-    },
-    "resolveJsonModule": true,
-    /* JavaScript Support */
-    "allowJs": false,
-    /* Emit */
-    "sourceMap": false,
-    "outDir": "dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    /* Type Checking */
-    "strict": true,
-    "skipLibCheck": true,
-    "types": [
-      "unplugin-vue-define-options"
-    ]
-  },
-  /*
-    It will make ts cannot find any input,
-    and "import xx from '@sure-ui/xx'" will be error
-  */
-  // "include": ["packages/*"],
-  "exclude": [
-    "**/dist",
-    "node_modules"
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.web.json"
+    }
+    // { "path": "./tsconfig.play.json" },
+    // { "path": "./tsconfig.node.json" },
+    // { "path": "./tsconfig.vite-config.json" },
+    // { "path": "./tsconfig.vitest.json" }
   ]
 }
