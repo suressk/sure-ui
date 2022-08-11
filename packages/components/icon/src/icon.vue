@@ -23,10 +23,12 @@ const style = computed<CSSProperties>(() => {
     '--color': props.color
   }
 })
+
+const cls = props.loading ? 'sure-icon sure-icon-loading' : 'sure-icon'
 </script>
 
 <template>
-  <i class="sure-icon" :style="style">
+  <i :class="cls" :style="style">
     <slot />
   </i>
 </template>

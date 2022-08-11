@@ -11,6 +11,9 @@ export const iconProps = {
   },
   color: {
     type: String
+  },
+  loading: {
+    type: Boolean
   }
 }
 
