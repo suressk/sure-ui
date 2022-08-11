@@ -1,10 +1,16 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { SureIcon } from '@sure-ui/components'
-import { Apple, Chrome } from 'sure-icons-vue'
-import Comp from './components/Comp.vue'
+import * as icons from 'sure-icons-vue'
+import { generateRandomHex } from 'sure-utils'
+// import Comp from './components/Comp.vue'
 
 const count = ref(0)
+const colors: string[] = []
+const len = Object.entries(icons).length
+for (let i = 0; i < len; i++) {
+  colors.push(generateRandomHex())
+}
 
 const change = () => {
   count.value++
@@ -20,17 +26,18 @@ const change = () => {
     </button>
     <br>
     <br>
-    <Comp class="sure-comp" />
-    <br>
     <a href="https://npmjs.com/package/sure-icons-vue">sure-icons-vue</a>
     <br>
-    <SureIcon color="#2177b8" :size="20">
-      <Apple />
+    <br>
+    <SureIcon
+      v-for="(Icon, key, i) in icons"
+      :key="Icon.name"
+      :size="30"
+      :color="colors[i]"
+      :loading="key === 'Loading'"
+    >
+      <component :is="Icon" />
     </SureIcon>
-    <SureIcon color="#45b787" size="30px">
-      <Chrome />
-    </SureIcon>
-    <Apple style="height: 2em; width: 2em; color: #fbda41;" />
   </div>
 </template>
 
