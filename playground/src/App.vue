@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { SureIcon } from '@sure-ui/components'
 import * as icons from 'sure-icons-vue'
 import { generateRandomHex } from 'sure-utils'
-// import Comp from './components/Comp.vue'
 
 const count = ref(0)
 const colors: string[] = []
@@ -29,7 +27,7 @@ const change = () => {
     <a href="https://npmjs.com/package/sure-icons-vue">sure-icons-vue</a>
     <br>
     <br>
-    <SureIcon
+    <sure-icon
       v-for="(Icon, key, i) in icons"
       :key="Icon.name"
       :size="30"
@@ -37,7 +35,7 @@ const change = () => {
       :loading="key === 'Loading'"
     >
       <component :is="Icon" />
-    </SureIcon>
+    </sure-icon>
   </div>
 </template>
 
