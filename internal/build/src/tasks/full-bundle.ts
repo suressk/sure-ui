@@ -25,8 +25,9 @@ import {
   writeBundles
 } from '../utils'
 import { target } from '../build-info'
+import { version } from '../../../../packages/sure-ui/version'
 
-const version = '0.0.0-dev.1'
+// const version = '0.0.0-dev.1'
 
 const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`
 
