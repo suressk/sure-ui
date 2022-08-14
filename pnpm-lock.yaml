@@ -9,6 +9,7 @@ importers:
       '@sure-ui/build': workspace:^1.0.0
       '@sure-ui/build-utils': workspace:^1.0.0
       '@sure-ui/components': workspace:^1.0.0
+      '@sure-ui/constants': workspace:^1.0.0
       '@sure-ui/theme-chalk': workspace:^1.0.0
       '@sure-ui/utils': workspace:*
       '@types/fs-extra': ^9.0.13
@@ -41,6 +42,7 @@ importers:
       vue: ^3.2.37
     dependencies:
       '@sure-ui/components': link:packages/components
+      '@sure-ui/constants': link:packages/constants
       '@sure-ui/theme-chalk': link:packages/theme-chalk
       '@sure-ui/utils': link:packages/utils
       '@vueuse/core': 8.6.0_vue@3.2.37
@@ -158,6 +160,12 @@ importers:
 
   packages/hooks:
     specifiers: {}
+
+  packages/sure-ui:
+    specifiers:
+      dayjs: ^1.11.5
+    dependencies:
+      dayjs: 1.11.5
 
   packages/theme-chalk:
     specifiers:
@@ -2429,6 +2437,10 @@ packages:
   /dateformat/3.0.3:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
     dev: true
+
+  /dayjs/1.11.5:
+    resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==}
+    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
