@@ -1,0 +1,5 @@
+@use '../mixins/mixins.scss' as *;
+
+html.dark {
+  color-scheme: dark;
+}

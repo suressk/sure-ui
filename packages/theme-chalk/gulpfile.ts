@@ -50,22 +50,22 @@ const buildThemeChalk = () => {
  * Build dark Css Vars
  * @returns
  */
-// const buildDarkCssVars = () => {
-//   const sass = gulpSass(dartSass)
-//   return src(path.resolve(__dirname, 'src/dark/css-vars.scss'))
-//     .pipe(sass.sync())
-//     .pipe(autoprefixer({ cascade: false }))
-//     .pipe(
-//       cleanCSS({}, (details) => {
-//         consola.success(
-//           `${colors.cyan(details.name)}: ${colors.yellow(
-//             details.stats.originalSize / 1000
-//           )} KB -> ${colors.green(details.stats.minifiedSize / 1000)} KB`
-//         )
-//       })
-//     )
-//     .pipe(dest(`${distFolder}/dark`))
-// }
+const buildDarkCssVars = () => {
+  const sass = gulpSass(dartSass)
+  return src(path.resolve(__dirname, 'src/dark/css-vars.scss'))
+    .pipe(sass.sync())
+    .pipe(autoprefixer({ cascade: false }))
+    .pipe(
+      cleanCSS({}, (details) => {
+        consola.success(
+          `${colors.cyan(details.name)}: ${colors.yellow(
+            details.stats.originalSize / 1000
+          )} KB -> ${colors.green(details.stats.minifiedSize / 1000)} KB`
+        )
+      })
+    )
+    .pipe(dest(`${distFolder}/dark`))
+}
 
 /**
  * copy from packages/theme-chalk/dist to dist/sure-ui/theme-chalk
@@ -87,7 +87,7 @@ export const build = parallel(
   copyThemeChalkSource,
   series(
     buildThemeChalk,
-    // buildDarkCssVars,
+    buildDarkCssVars,
     copyThemeChalkBundle
   )
 )
