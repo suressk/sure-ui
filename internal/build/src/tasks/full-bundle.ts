@@ -16,7 +16,7 @@ import {
 } from '@sure-ui/build-constants'
 import { localeRoot, sureOutput, sureRoot } from '@sure-ui/build-utils'
 import type { Plugin } from 'rollup'
-// import { version } from '../../../../packages/sure-ui/version'
+import { version } from '../../../../packages/sure-ui/version'
 import { SureAlias } from '../plugins/sure-ui-alias'
 import {
   formatBundleFilename,
@@ -25,7 +25,6 @@ import {
   writeBundles
 } from '../utils'
 import { target } from '../build-info'
-import { version } from '../../../../packages/sure-ui/version'
 
 // const version = '0.0.0-dev.1'
 

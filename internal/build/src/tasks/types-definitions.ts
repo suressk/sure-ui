@@ -4,7 +4,7 @@ import fs from 'fs/promises'
 import consola from 'consola'
 import * as vueCompiler from 'vue/compiler-sfc'
 import glob from 'fast-glob'
-import chalk from 'chalk'
+import colors from 'picocolors'
 import { Project } from 'ts-morph'
 import {
   buildOutput,
@@ -51,15 +51,15 @@ export const generateTypesDefinitions = async () => {
   const tasks = sourceFiles.map(async (sourceFile) => {
     const relativePath = path.relative(pkgRoot, sourceFile.getFilePath())
     consola.trace(
-      chalk.yellow(
-        `Generating definition for file: ${chalk.bold(relativePath)}`
+      colors.yellow(
+        `Generating definition for file: ${colors.bold(relativePath)}`
       )
     )
 
     const emitOutput = sourceFile.getEmitOutput()
     const emitFiles = emitOutput.getOutputFiles()
     if (emitFiles.length === 0) {
-      throw new Error(`Emit no file: ${chalk.bold(relativePath)}`)
+      throw new Error(`Emit no file: ${colors.bold(relativePath)}`)
     }
 
     const subTasks = emitFiles.map(async (outputFile) => {
@@ -75,8 +75,8 @@ export const generateTypesDefinitions = async () => {
       )
 
       consola.success(
-        chalk.green(
-          `Definition for file: ${chalk.bold(relativePath)} generated`
+        colors.green(
+          `Definition for file: ${colors.bold(relativePath)} generated`
         )
       )
     })
