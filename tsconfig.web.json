@@ -4,8 +4,7 @@
     "composite": true,
     "jsx": "preserve",
     "lib": [
-      // "ES2018",
-      "ES2021",
+      "ES2018",
       "DOM",
       "DOM.Iterable"
     ],
