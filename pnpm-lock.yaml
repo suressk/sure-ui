@@ -10,6 +10,8 @@ importers:
       '@sure-ui/build-utils': workspace:^1.0.0
       '@sure-ui/components': workspace:^1.0.0
       '@sure-ui/constants': workspace:^1.0.0
+      '@sure-ui/directives': workspace:^1.0.0
+      '@sure-ui/hooks': workspace:^1.0.0
       '@sure-ui/theme-chalk': workspace:^1.0.0
       '@sure-ui/utils': workspace:*
       '@types/fs-extra': ^9.0.13
@@ -43,6 +45,8 @@ importers:
     dependencies:
       '@sure-ui/components': link:packages/components
       '@sure-ui/constants': link:packages/constants
+      '@sure-ui/directives': link:packages/directives
+      '@sure-ui/hooks': link:packages/hooks
       '@sure-ui/theme-chalk': link:packages/theme-chalk
       '@sure-ui/utils': link:packages/utils
       '@vueuse/core': 8.6.0_vue@3.2.37

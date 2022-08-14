@@ -24,6 +24,8 @@
   "dependencies": {
     "@sure-ui/components": "workspace:^1.0.0",
     "@sure-ui/constants": "workspace:^1.0.0",
+    "@sure-ui/directives": "workspace:^1.0.0",
+    "@sure-ui/hooks": "workspace:^1.0.0",
     "@sure-ui/theme-chalk": "workspace:^1.0.0",
     "@sure-ui/utils": "workspace:*",
     "@vueuse/core": "^8.6.0",
