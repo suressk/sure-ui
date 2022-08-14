@@ -15,7 +15,7 @@ import type { Module } from './src'
 /**
  * Copy files: `package.json`, `README.md`, `global.d.ts`
  */
-export const copyFiles = () => {
+export const copyFiles = async () => {
   Promise.all([
     copyFile(surePackage, join(sureOutput, 'package.json')),
     copyFile(
@@ -41,6 +41,7 @@ export const copyTypesDefinitions: TaskFunction = (done) => {
       `copyTypes:${module}`,
       () => copy(src, buildConfig[module].output.path, { recursive: true })
     )
+
   return parallel(copyTypes('esm'), copyTypes('cjs'))(done)
 }
 
@@ -61,8 +62,8 @@ export default series(
     runTask('generateTypesDefinitions'),
     runTask('buildHelper'),
     series(
-      withTaskName('buildThemeChalk', () => {
-        run('pnpm run -C packages/theme-chalk build')
+      withTaskName('buildThemeChalk', async () => {
+        await run('pnpm run -C packages/theme-chalk build')
       }),
       copyFullStyle
     )

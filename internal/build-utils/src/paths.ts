@@ -28,6 +28,7 @@ export const themePackage = resolve(themeRoot, 'package.json')
 export const hooksPackage = resolve(hooksRoot, 'package.json')
 export const localePackage = resolve(localeRoot, 'package.json')
 export const directivesPackage = resolve(directivesRoot, 'package.json')
+// packages/sure-ui/package.json
 export const surePackage = resolve(sureRoot, 'package.json')
 export const utilsPackage = resolve(utilsRoot, 'package.json')
 export const docsPackage = resolve(docsRoot, 'package.json')

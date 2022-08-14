@@ -1,5 +1,5 @@
 import vue from '@vitejs/plugin-vue'
-// import vueJsx from '@vitejs/plugin-vue-jsx'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import DefineOptions from 'unplugin-vue-define-options/rollup'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
@@ -28,7 +28,7 @@ export const buildModules = async () => {
       vue({
         isProduction: false
       }) as Plugin,
-      // vueJsx(),
+      vueJsx(),
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts']
       }),
