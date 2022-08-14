@@ -3,7 +3,7 @@ import { isString } from 'sure-utils'
 class SureUiError extends Error {
   constructor(m: string) {
     super(m)
-    this.name = 'ElementPlusError'
+    this.name = 'SureUI Error'
   }
 }
 
