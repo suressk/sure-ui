@@ -1,3 +1,4 @@
 export * from './install'
-export * from './runtime'
 export * from './typescript'
+export * from './props'
+export * from './icon'
