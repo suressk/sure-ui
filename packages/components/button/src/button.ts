@@ -1,13 +1,5 @@
 import { Loading } from 'sure-icons-vue'
-import type { Component, PropType } from 'vue'
-
-export const definePropType = <T>(val: any): PropType<T> => val
-
-export const iconPropType = definePropType<string | Component>([
-  String,
-  Object,
-  Function
-])
+import { iconPropType } from '@sure-ui/utils'
 
 export const buttonTypes = [
   'default',
