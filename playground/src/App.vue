@@ -36,15 +36,25 @@ const change = () => {
     >
       <component :is="Icon" />
     </sure-icon>
+    <br>
+    <br>
+    <sure-button type="primary" loading>
+      button content
+    </sure-button>
   </div>
 </template>
 
 <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100vw;
   height: 100vh;
-  margin: 0;
 }
 .temp {
   height: 100%;
