@@ -1,0 +1,79 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/button' as *;
+@use 'mixins/mixins' as *;
+// @use 'mixins/utils' as *;
+// @use 'mixins/var' as *;
+
+.#{$namespace}-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1;
+  // min-height will expand when in flex
+  height: map.get($input-height, 'default');
+  white-space: nowrap;
+  cursor: pointer;
+  color: getCssVar('button', 'text-color');
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: getCssVar('button', 'font-weight');
+  user-select: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: getCssVar('button', 'bg-color');
+  border: getCssVar('border');
+  border-color: getCssVar('button', 'border-color');
+
+  &:hover,
+  &:focus {
+    color: getCssVar('button', 'hover', 'text-color');
+    border-color: getCssVar('button', 'hover', 'border-color');
+    background-color: getCssVar('button', 'hover', 'bg-color');
+    outline: none;
+  }
+
+  &:active {
+    color: getCssVar('button', 'active', 'text-color');
+    border-color: getCssVar('button', 'active', 'border-color');
+    background-color: getCssVar('button', 'active', 'bg-color');
+    outline: none;
+  }
+
+  >span {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &+& {
+    margin-left: 12px;
+  }
+}
+
+// @include b(button) {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   line-height: 1;
+//   // min-height will expand when in flex
+//   height: map.get($input-height, 'default');
+//   white-space: nowrap;
+//   cursor: pointer;
+//   color: getCssVar('button', 'text-color');
+//   text-align: center;
+//   box-sizing: border-box;
+//   outline: none;
+//   transition: 0.1s;
+//   font-weight: getCssVar('button', 'font-weight');
+//   user-select: none;
+//   vertical-align: middle;
+//   -webkit-appearance: none;
+//   background-color: getCssVar('button', 'bg-color');
+//   border: getCssVar('border');
+//   border-color: getCssVar('button', 'border-color');
+// }

@@ -1,0 +1,16 @@
+@use 'sass:math';
+@use 'sass:map';
+
+$common-component-size: (
+  ) !default;
+$common-component-size: map.merge(('large': 40px,
+      'default': 32px,
+      'small': 24px,
+    ),
+    $common-component-size
+);
+
+$input-height: (
+  ) !default;
+$input-height: map.merge($common-component-size, $input-height
+);
