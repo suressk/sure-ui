@@ -30,7 +30,10 @@ export const buttonProps = {
     type: iconPropType,
     default: ''
   },
-  disabled: Boolean
+  disabled: Boolean,
+  round: Boolean,
+  circle: Boolean,
+  color: String
 }
 
 export const buttonEmits = {
