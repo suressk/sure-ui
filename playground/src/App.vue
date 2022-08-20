@@ -32,13 +32,18 @@ const change = () => {
       :key="Icon.name"
       :size="30"
       :color="colors[i]"
-      :loading="key === 'Loading'"
+      :class="{
+        'is-loading': key === 'Loading'
+      }"
     >
       <component :is="Icon" />
     </sure-icon>
     <br>
     <br>
-    <sure-button type="primary" loading>
+    <sure-button type="primary" loading round />
+    <sure-button type="primary" :icon="icons.Github" circle />
+    <br>
+    <sure-button type="primary" loading :loading-icon="icons.Flash">
       button content
     </sure-button>
   </div>
