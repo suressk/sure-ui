@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { SureIcon } from '@sure-ui/components/icon'
+import { useNamespace } from '@sure-ui/hooks'
 import { buttonEmits, buttonProps } from './button'
 
 const props = defineProps(buttonProps)
@@ -13,6 +14,9 @@ defineOptions({
 
 const _ref = ref<HTMLButtonElement>()
 const _type = computed(() => props.type || '')
+const _disabled = computed(() => props.disabled || false)
+
+const ns = useNamespace('button')
 
 defineExpose({
   ref: _ref,
@@ -25,10 +29,22 @@ const handleClick = (evt: MouseEvent) => {
 </script>
 
 <template>
-  <button ref="_ref" class="sure-button" @click="handleClick">
+  <button
+    ref="_ref"
+    :class="[
+      ns.baseCls(),
+      ns.modifierCls(_type),
+      ns.isCls('round', round),
+      ns.isCls('circle', circle)
+    ]"
+    :aria-disabled="_disabled || loading"
+    :disabled="_disabled || loading"
+    @click="handleClick"
+  >
     <template v-if="loading">
       <slot v-if="$slots.loading" name="loading" />
-      <sure-icon v-else loading>
+      <!-- ns.is('xxx') => add 'is-xxx' className -->
+      <sure-icon v-else :class="ns.isCls('loading')">
         <component :is="loadingIcon" />
       </sure-icon>
     </template>
@@ -38,10 +54,11 @@ const handleClick = (evt: MouseEvent) => {
       <slot v-else name="icon" />
     </sure-icon>
 
-    <!-- :class="{ [ns.em('text', 'expand')]: shouldAddSpace }" -->
-    <span
-      v-if="$slots.default"
-    >
+    <span v-if="$slots.default">
+      <!--
+      :class="{ [ns.elementModifierCls('text', 'expand')]: shouldAddSpace }"
+      add 'sure-button__text--expand' className to add `letter-space`
+      -->
       <slot />
     </span>
   </button>
