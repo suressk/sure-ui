@@ -16,7 +16,8 @@
   height: map.get($input-height, 'default');
   white-space: nowrap;
   cursor: pointer;
-  color: getCssVar('button', 'text-color');
+  // color: getCssVar('button', 'text-color');
+  color: #fff;
   text-align: center;
   box-sizing: border-box;
   outline: none;
@@ -25,9 +26,11 @@
   user-select: none;
   vertical-align: middle;
   -webkit-appearance: none;
-  background-color: getCssVar('button', 'bg-color');
+  // background-color: getCssVar('button', 'bg-color');
+  background-color: $primary;
   border: getCssVar('border');
   border-color: getCssVar('button', 'border-color');
+  border-radius: 2px;
 
   &:hover,
   &:focus {
@@ -37,11 +40,30 @@
     outline: none;
   }
 
+  &--primary {
+    border: 1px solid $primary;
+    // color: getCssVar('color', 'primary');
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+    padding: 8px;
+  }
+
+  &.is-round {
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+
   &:active {
     color: getCssVar('button', 'active', 'text-color');
     border-color: getCssVar('button', 'active', 'border-color');
     background-color: getCssVar('button', 'active', 'bg-color');
     outline: none;
+  }
+
+  & [class*=#{$namespace}-icon]+span {
+    margin-left: 6px;
   }
 
   >span {
