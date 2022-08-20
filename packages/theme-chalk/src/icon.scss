@@ -1,10 +1,6 @@
 // @use 'sass:map';
 @use 'mixins/mixins.scss' as *;
 
-.#{$namespace}-icon-loading {
-  animation: rotating 2s linear infinite;
-}
-
 @keyframes rotating {
   0% {
     transform: rotateZ(0deg);
@@ -31,6 +27,10 @@
   // @include when(loading) {
   //   animation: rotating 2s linear infinite;
   // }
+
+  &.is-loading {
+    animation: rotating 2s linear infinite;
+  }
 
   svg {
     height: 1em;
